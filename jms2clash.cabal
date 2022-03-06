@@ -25,7 +25,8 @@ executable jms2clash
 
     other-modules:
         Subscription,
-        Options
+        Options,
+        APIServer
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
