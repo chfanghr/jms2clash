@@ -19,7 +19,7 @@ execute (Options (SubscriptionLink sub) (Out out)) =
 execute
   ( Options
       (SubscriptionLink sub)
-      (Serve (APIServerOptions host port shouldDeamonize period secret))
+      (Serve (APIServerOptions host port shouldDaemonize period secret))
     ) = do
     yaml <- fetchAndConvertSubscription sub
     confVar <- newTVarIO yaml
@@ -30,7 +30,7 @@ execute
               startAPIServer confVar host port secret
           )
 
-    if shouldDeamonize
+    if shouldDaemonize
       then daemonize mainRoutine
       else mainRoutine
 
