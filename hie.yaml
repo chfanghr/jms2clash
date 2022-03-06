@@ -1,0 +1,4 @@
+cradle:
+  cabal:
+    - path: "app"
+      component: "jms2clash:exe:jms2clash"
