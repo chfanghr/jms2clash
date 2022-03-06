@@ -109,13 +109,15 @@ apiServerOptions =
     <*> option
       auto
       ( long "fetch-period"
-          <> help "When should the service fetch the new subscription data, in seconds.(default: 600)"
-          <> value 600
+          <> help "When should the service fetch the new subscription data, in seconds.(default: 7200)"
+          <> value 7200
+          <> metavar "SECONDS"
       )
     <*> strOption
       ( long "secret"
           <> help "The secret. If not empty, access /?secret=<SECRET> to get the configuration."
           <> value ""
+          <> metavar "SECRET"
       )
 
 data Todo
