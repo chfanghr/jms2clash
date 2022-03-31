@@ -48,7 +48,8 @@ instance ToJSON SSConf where
         "cipher" .= enc,
         "server" .= ip,
         "port" .= port,
-        "password" .= pass
+        "password" .= pass,
+        "type" .= ("ss" :: String)
       ]
 
 data VMessConf = VMessConf
